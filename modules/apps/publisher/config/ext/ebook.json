@@ -83,6 +83,11 @@
             "name":"editable",
             "value":false
         },
+        {
+            "field": "overview.url",
+            "name": "fileExtension",
+            "value":"pdf"
+        }
 
     ],
 

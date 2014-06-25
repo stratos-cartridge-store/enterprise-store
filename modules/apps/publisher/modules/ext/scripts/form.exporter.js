@@ -68,9 +68,10 @@ var module = function () {
             data['isReadOnly'] = false;
             data['isEditable'] = true;
             data['isFile'] = false;
+            
             data['columnLabels'] = [];
             data['columnNames'] = [];
-
+            data['fileExtension'] = [];
 
             //Go through all the fields in the table
             for (var key in table.fields) {
@@ -270,6 +271,8 @@ var module = function () {
         data['isReadOnly'] = (fieldTemplate.meta.readOnly) ? fieldTemplate.meta.readOnly : false;
         data['isEditable'] = (fieldTemplate.meta.editable) ? fieldTemplate.meta.editable : false;
         data['isFile'] = (fieldTemplate.type == 'file') ? true : false;
+        
+        data['fileExtension'] = (fieldTemplate.meta.fileExtension) ? fieldTemplate.meta.fileExtension : '';
 
         data['value'] = field.value;
 
@@ -321,6 +324,7 @@ var module = function () {
                 data['isReadOnly'] = (fieldTemplate.meta.readOnly) ? fieldTemplate.meta.readOnly : false;
                 data['isEditable'] = (fieldTemplate.meta.editable) ? fieldTemplate.meta.editable : false;
                 data['isFile'] = (fieldTemplate.type == 'file') ? true : false;
+                data['fileExtension'] = (fieldTemplate.meta.fileExtension) ? fieldTemplate.meta.fileExtension : '';
 
                 //log.info(field.name+' = '+stringify(field.value));
 
